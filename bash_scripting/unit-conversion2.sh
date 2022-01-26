@@ -13,11 +13,12 @@ then
 	exit $E_NOARG
 fi
 
-if [ $# -gt 4 ]
+if [ $# -ge 4 ]
 # Check if too much args.
 then
 	echo "ERROR: Too many arguments!"
 	echo "Usage: ./unit-conversion2.sh <Unit1> <Unit2> <quantity>"
+	exit $E_TOOMANYARGS
 fi
 
 convert_units ()  # Takes as arguments the units to convert.
